@@ -29,12 +29,12 @@ RUN cd $BUILD_SCRIPTS_DIR && \
 		bash $BUILD_SCRIPTS_DIR/install-mongo.sh && \
 		bash $BUILD_SCRIPTS_DIR/post-install-cleanup.sh
 
+RUN bash $BUILD_SCRIPTS_DIR/install-meteor.sh
 # copy the app to the container
 COPY . $APP_SOURCE_DIR
 
 # install Meteor, build app, clean up
 RUN cd $APP_SOURCE_DIR && \
-            bash $BUILD_SCRIPTS_DIR/install-meteor.sh && \
             bash $BUILD_SCRIPTS_DIR/build-meteor.sh && \
             bash $BUILD_SCRIPTS_DIR/post-build-cleanup.sh
 

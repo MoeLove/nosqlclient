@@ -40,9 +40,11 @@ Template.navigation.events({
     CollectionUtil.showMongoBinaryInfo();
   },
 
+  /*
   'click #anchorDatabaseDumpRestore': function () {
     CollectionUtil.showMongoBinaryInfo();
   },
+  */
 
   'click #btnRefreshCollections': function (event) {
     event.preventDefault();
@@ -54,6 +56,7 @@ Template.navigation.events({
     Connection.showSwitchDatabaseModal();
   },
 
+  /*
   'click #btnDropAllCollections': function (event) {
     event.preventDefault();
     CollectionUtil.dropAllCollections();
@@ -63,6 +66,7 @@ Template.navigation.events({
     event.preventDefault();
     CollectionUtil.dropDatabase();
   },
+  */
 
 
   'click .aNavigations': function () {
@@ -75,6 +79,7 @@ Template.navigation.events({
   },
 });
 
+/*
 Template.navigation.onRendered(() => {
   const modals = CollectionUtil.prepareContextMenuModals();
 
@@ -98,6 +103,7 @@ Template.navigation.onRendered(() => {
     }
   });
 });
+*/
 
 Template.navigation.helpers({
   equals(a, b) {

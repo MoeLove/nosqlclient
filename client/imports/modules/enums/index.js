@@ -100,9 +100,11 @@ const Enums = function () {
     SCALE: 'scale',
   };
 
+  /*
   this.RENAME_OPTIONS = {
     DROP_TARGET: 'dropTarget',
   };
+  */
 
   this.MAP_REDUCE_OPTIONS = {
     OUT: 'out',
